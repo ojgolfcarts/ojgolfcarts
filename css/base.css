@@ -1,0 +1,231 @@
+/* ========================================
+   BASE CSS — OJ Golf Cart Rentals
+   ======================================== */
+
+/* --- Design Tokens --- */
+:root {
+  /* Type Scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+  --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+  --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+  --text-hero: clamp(3rem, 0.5rem + 7vw, 8rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Content Widths */
+  --content-narrow: 640px;
+  --content-default: 960px;
+  --content-wide: 1200px;
+
+  /* Fonts */
+  --font-display: 'Clash Display', 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'General Sans', 'Inter', sans-serif;
+}
+
+/* --- Light Mode (default) --- */
+:root, [data-theme='light'] {
+  /* Surfaces — warm off-white, Caribbean inspired */
+  --color-bg: #FAF8F4;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F3EFE8;
+  --color-surface-offset: #EDE9E0;
+  --color-divider: #DDD9CF;
+  --color-border: #CCC8BC;
+
+  /* Text */
+  --color-text: #1A1A18;
+  --color-text-muted: #6B6960;
+  --color-text-faint: #B0ADA4;
+  --color-text-inverse: #FAFAF8;
+
+  /* Primary — deep ocean teal */
+  --color-primary: #0A7E8C;
+  --color-primary-hover: #08646F;
+  --color-primary-active: #064C55;
+  --color-primary-subtle: #D0EDEF;
+
+  /* Accent — warm sand/gold */
+  --color-accent: #D4A017;
+  --color-accent-hover: #B8880E;
+  --color-accent-subtle: #FBF0D0;
+
+  /* Success */
+  --color-success: #2E7D32;
+  --color-success-subtle: #C8E6C9;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+  --shadow-xl: 0 24px 64px rgba(0,0,0,0.18);
+}
+
+/* --- Dark Mode --- */
+[data-theme='dark'] {
+  --color-bg: #0D1B2A;
+  --color-surface: #132233;
+  --color-surface-2: #1A2C3F;
+  --color-surface-offset: #1F3347;
+  --color-divider: #2A3F52;
+  --color-border: #354D62;
+
+  --color-text: #E8E4DA;
+  --color-text-muted: #8FA3B1;
+  --color-text-faint: #4F6478;
+  --color-text-inverse: #0D1B2A;
+
+  --color-primary: #3DC2D0;
+  --color-primary-hover: #52CDD9;
+  --color-primary-active: #6BD9E4;
+  --color-primary-subtle: #0F3040;
+
+  --color-accent: #F5C842;
+  --color-accent-hover: #FFD966;
+  --color-accent-subtle: #2A220A;
+
+  --color-success: #66BB6A;
+  --color-success-subtle: #1B3A1C;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+  --shadow-xl: 0 24px 64px rgba(0,0,0,0.6);
+}
+
+/* System preference fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg: #0D1B2A;
+    --color-surface: #132233;
+    --color-surface-2: #1A2C3F;
+    --color-surface-offset: #1F3347;
+    --color-divider: #2A3F52;
+    --color-border: #354D62;
+    --color-text: #E8E4DA;
+    --color-text-muted: #8FA3B1;
+    --color-text-faint: #4F6478;
+    --color-text-inverse: #0D1B2A;
+    --color-primary: #3DC2D0;
+    --color-primary-hover: #52CDD9;
+    --color-primary-active: #6BD9E4;
+    --color-primary-subtle: #0F3040;
+    --color-accent: #F5C842;
+    --color-accent-hover: #FFD966;
+    --color-accent-subtle: #2A220A;
+    --color-success: #66BB6A;
+    --color-success-subtle: #1B3A1C;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+    --shadow-xl: 0 24px 64px rgba(0,0,0,0.6);
+  }
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--space-20);
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img, picture, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul[role='list'], ol[role='list'] { list-style: none; }
+input, button, textarea, select { font: inherit; color: inherit; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  line-height: 1.15;
+  font-family: var(--font-display);
+}
+
+p, li, figcaption {
+  text-wrap: pretty;
+  max-width: 72ch;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 25%, transparent);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+button { cursor: pointer; background: none; border: none; }
+
+a, button, [role='button'], input, textarea, select {
+  transition: color var(--transition-interactive),
+              background var(--transition-interactive),
+              border-color var(--transition-interactive),
+              box-shadow var(--transition-interactive),
+              opacity var(--transition-interactive);
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+}

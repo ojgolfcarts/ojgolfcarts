@@ -1,0 +1,25 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/4-person-cart",
+      "destination": "/index.html#fleet",
+      "permanent": true
+    },
+    {
+      "source": "/golf-carts",
+      "destination": "/index.html#fleet",
+      "permanent": true
+    },
+    {
+      "source": "/san-pedro-belize",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/visitor-guide.html#faq",
+      "permanent": true
+    }
+  ]
+}
