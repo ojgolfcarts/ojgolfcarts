@@ -925,6 +925,21 @@
   max-width: 50ch;
   margin-inline: auto;
 }
+.booking-hero__image {
+  display: block;
+  margin: var(--space-8) auto 0;
+  max-width: 720px;
+  width: 100%;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+.booking-hero__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .booking-layout {
   display: grid;
   grid-template-columns: 1fr 380px;
