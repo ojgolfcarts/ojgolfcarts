@@ -12,7 +12,7 @@
   })(window,document,'script','dataLayer','GTM-W9NL2V86');</script>
   <!-- End Google Tag Manager -->
   <title>San Pedro Visitor Guide 2026 | OJ Golf Cart Rentals</title>
-  <meta name="description" content="Your complete San Pedro, Belize visitor guide, 2026 Lobster Fest schedule, top spots, beaches, and tips for exploring Ambergris Caye by golf cart." />
+  <meta name="description" content="Your complete San Pedro, Belize visitor guide, 2026 Independence Day and September Celebrations schedule, Lobster Fest, top spots, beaches, and tips for exploring Ambergris Caye by golf cart." />
   <link rel="canonical" href="https://www.ojgolfcarts.com/visitor-guide" />
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="stylesheet" href="css/base.css" />
@@ -268,6 +268,195 @@
       .schedule-table td, .schedule-table thead th { padding: var(--space-3); font-size: 0.82rem; }
       .lobster-dates { flex-direction: column; }
     }
+
+    /* ===== Independence Day (Belize @ 45) ===== */
+    .indep-hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-2xl);
+      padding: clamp(var(--space-8), 5vw, var(--space-14));
+      margin-bottom: var(--space-10);
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(206,17,38,0.92) 0%, rgba(255,255,255,0.14) 50%, rgba(0,49,141,0.94) 100%),
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25), transparent 60%),
+        #00318D;
+      text-align: left;
+      isolation: isolate;
+    }
+    .indep-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0 12px, transparent 12px 28px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .indep-hero__stripes {
+      position: absolute; left: 0; right: 0; height: 8px;
+      background: repeating-linear-gradient(90deg, #CE1126 0 40px, #fff 40px 60px, #00318D 60px 100px);
+      z-index: 1;
+    }
+    .indep-hero__stripes--top { top: 0; }
+    .indep-hero__stripes--bottom { bottom: 0; }
+    .indep-hero__inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr auto; gap: var(--space-8); align-items: center; }
+    .indep-hero .label {
+      display: inline-block;
+      background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.4);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    .indep-hero h2 {
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    }
+    .indep-hero .theme {
+      font-style: italic;
+      opacity: 0.95;
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+    }
+    .indep-hero p.lede { opacity: 0.94; font-size: 1rem; line-height: 1.6; max-width: 55ch; }
+    .indep-flag {
+      width: 220px; max-width: 32vw;
+      border-radius: 8px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+      border: 3px solid #fff;
+      transform: rotate(-2deg);
+      transition: transform 0.3s;
+    }
+    .indep-flag:hover { transform: rotate(0deg) scale(1.03); }
+    .indep-dates {
+      display: flex; flex-wrap: wrap; gap: var(--space-4);
+      margin-top: var(--space-6);
+    }
+    .indep-date-badge {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: var(--radius-xl);
+      padding: var(--space-4) var(--space-6);
+      text-align: center;
+      min-width: 140px;
+    }
+    .indep-date-badge strong { display: block; font-size: 1.35rem; font-weight: 900; }
+    .indep-date-badge span { font-size: 0.8rem; opacity: 0.9; }
+
+    /* Independence schedule table */
+    .indep-schedule-wrap {
+      overflow-x: auto;
+      border-radius: var(--radius-2xl);
+      border: 1px solid var(--color-border);
+      margin-bottom: var(--space-8);
+    }
+    .indep-schedule {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .indep-schedule thead {
+      background: linear-gradient(90deg, #CE1126 0%, #00318D 100%);
+      color: #fff;
+    }
+    .indep-schedule thead th {
+      padding: var(--space-4) var(--space-5);
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .indep-schedule tbody tr {
+      border-bottom: 1px solid var(--color-border);
+      transition: background 0.15s;
+    }
+    .indep-schedule tbody tr:last-child { border-bottom: none; }
+    .indep-schedule tbody tr:hover { background: var(--color-surface-offset); }
+    .indep-schedule td {
+      padding: var(--space-4) var(--space-5);
+      color: var(--color-text);
+      vertical-align: top;
+    }
+    .indep-schedule td:first-child {
+      font-weight: 800;
+      white-space: nowrap;
+      color: #CE1126;
+    }
+    .indep-schedule .headline-row {
+      background: linear-gradient(90deg, rgba(206,17,38,0.10), rgba(0,49,141,0.06));
+    }
+    .indep-schedule .headline-row td:nth-child(2) {
+      font-weight: 800;
+      color: #00318D;
+    }
+
+    /* Parade photo grid (past parades) */
+    .parade-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-4);
+      margin-bottom: var(--space-8);
+    }
+    .parade-card {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: linear-gradient(135deg, #CE1126, #fff 50%, #00318D);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      text-align: center;
+      padding: var(--space-6);
+    }
+    .parade-card__emoji { font-size: 3.5rem; margin-bottom: 8px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.35)); }
+    .parade-card__caption { font-size: 0.95rem; line-height: 1.3; }
+    .parade-card::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0 10px, transparent 10px 24px);
+      pointer-events: none;
+    }
+    .parade-card--flag { background-image: url('images/belize_flag.png'); background-size: cover; background-position: center; }
+    .parade-card--flag::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%);
+    }
+    .parade-card--flag .parade-card__inner { position: relative; z-index: 1; }
+
+    /* Passport-tip-style callout for the parade tip */
+    .indep-tip {
+      background: var(--color-surface);
+      border: 2px solid #CE1126;
+      border-left: 8px solid #00318D;
+      border-radius: var(--radius-2xl);
+      padding: var(--space-6) var(--space-8);
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+      margin-bottom: var(--space-12);
+    }
+    .indep-tip__icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
+    .indep-tip__text h3 { font-size: var(--text-base); font-weight: 800; margin-bottom: 4px; color: #CE1126; }
+    .indep-tip__text p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin: 0; }
+
+    @media (max-width: 720px) {
+      .indep-hero__inner { grid-template-columns: 1fr; text-align: center; }
+      .indep-flag { margin: 0 auto; width: 180px; transform: rotate(0); }
+      .indep-hero p.lede, .indep-hero .theme { margin-left: auto; margin-right: auto; }
+      .indep-dates { justify-content: center; }
+    }
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16804478473"></script>
@@ -376,6 +565,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <nav class="vg-toc" aria-label="Page sections">
         <h2>On This Page</h2>
         <ul>
+          <li><a href="#independence-day">🎆 Independence Day 2026</a></li>
           <li><a href="#lobster-fest">🦞 Lobster Fest 2026</a></li>
           <li><a href="#top-spots">🏖️ Top Spots</a></li>
           <li><a href="#blue-hole">🕳️ The Great Blue Hole</a></li>
@@ -385,6 +575,155 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="#faq">❓ FAQ</a></li>
         </ul>
       </nav>
+
+      <!-- ===== INDEPENDENCE DAY 2026 SECTION ===== -->
+      <section id="independence-day" aria-labelledby="indep-title">
+
+        <div class="indep-hero">
+          <div class="indep-hero__stripes indep-hero__stripes--top"></div>
+          <div class="indep-hero__inner">
+            <div>
+              <span class="label">🎆 Belize @ 45 · September Celebrations</span>
+              <h2 id="indep-title">Independence Day 2026 in San Pedro</h2>
+              <p class="theme">“Look At Me, I Am Belize at 45” — the official national theme.</p>
+              <p class="lede">A full month of red, white and blue on Ambergris Caye. Flag-raisings, uniform parades, jouvert, fireworks over the sea, and Belize’s only Independence Day parade by the water — all rolling through San Pedro. Deck your cart, hit the streets, and celebrate 45 years of Belize.</p>
+              <div class="indep-dates">
+                <div class="indep-date-badge">
+                  <strong>Sept 10</strong>
+                  <span>St. George’s Caye Day</span>
+                </div>
+                <div class="indep-date-badge">
+                  <strong>Sept 20</strong>
+                  <span>Eve · Flag-Raising &amp; Fireworks</span>
+                </div>
+                <div class="indep-date-badge">
+                  <strong>Sept 21</strong>
+                  <span>Independence Day Parade</span>
+                </div>
+              </div>
+            </div>
+            <img class="indep-flag" src="images/belize_flag.png" alt="Flag of Belize" width="440" height="264" loading="lazy" />
+          </div>
+          <div class="indep-hero__stripes indep-hero__stripes--bottom"></div>
+        </div>
+
+        <h3 class="vg-section-title">September Celebrations Schedule</h3>
+        <p class="vg-section-sub">San Pedro’s September events fall on the same dates every year. Times below reflect recent years’ patterns — the San Pedro Town Council typically posts the official 2026 playbill on Barrier Reef Drive in the final days of August.</p>
+
+        <div class="indep-schedule-wrap">
+          <table class="indep-schedule">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Where</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tue, Sept 1</td>
+                <td>National Flag Day — flag-raising ceremony at 6 AM</td>
+                <td>Central Park</td>
+              </tr>
+              <tr>
+                <td>Wed, Sept 9</td>
+                <td>Fire Engine Parade + Street Fest — 6 PM</td>
+                <td>Downtown &amp; Louis Sylvestre Sporting Arena</td>
+              </tr>
+              <tr class="headline-row">
+                <td>Thu, Sept 10</td>
+                <td>🎉 St. George’s Caye Day — ceremony 8:30 AM, Uniform Parade after</td>
+                <td>Central Park &amp; main streets</td>
+              </tr>
+              <tr>
+                <td>Sun, Sept 13</td>
+                <td>Noche Centroamericana — Central American &amp; Mexico Independence night</td>
+                <td>Louis Sylvestre Sporting Arena</td>
+              </tr>
+              <tr>
+                <td>Mon, Sept 14</td>
+                <td>National Day of Prayer — morning services</td>
+                <td>Local churches</td>
+              </tr>
+              <tr>
+                <td>Sat, Sept 19</td>
+                <td>National Service Day — Children’s Rally, 9 AM</td>
+                <td>Central Park</td>
+              </tr>
+              <tr class="headline-row">
+                <td>Sun, Sept 20</td>
+                <td>🎆 Independence Eve — formalities from 10 PM, midnight flag-raising, 21-gun salute, fireworks</td>
+                <td>Louis Sylvestre Sporting Arena</td>
+              </tr>
+              <tr>
+                <td>Mon, Sept 21 · 4 AM</td>
+                <td>J’ouvert paint &amp; glow street party</td>
+                <td>Downtown</td>
+              </tr>
+              <tr class="headline-row">
+                <td>Mon, Sept 21 · 1 PM</td>
+                <td>🎈 Grand Independence Day Parade — “the only parade by the sea in Belize”</td>
+                <td>Seagrape Dr → Blake St → Coconut Dr → Tarpon St → Pescador Dr → Laguna Dr → Boca del Rio Beach Park</td>
+              </tr>
+              <tr>
+                <td>Mon, Sept 21 · after parade</td>
+                <td>Daytime fireworks, live music, food &amp; drinks</td>
+                <td>Boca del Rio Beach Park</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="vg-section-title">A Look Back at Past Parades</h3>
+        <p class="vg-section-sub">San Pedranos and visitors go all-in — golf carts wrapped in red, white and blue, marching bands, dance troupes and floats rolling down Barrier Reef Drive to the sea.</p>
+
+        <div class="parade-gallery">
+          <div class="parade-card parade-card--flag">
+            <div class="parade-card__inner">
+              <div class="parade-card__caption">The Belize flag flies proud on every corner of Ambergris Caye every September</div>
+            </div>
+          </div>
+          <div class="parade-card">
+            <div>
+              <div class="parade-card__emoji">🛵</div>
+              <div class="parade-card__caption">Golf carts wrapped in flags &amp; streamers roll from Seagrape Dr to Boca del Rio</div>
+            </div>
+          </div>
+          <div class="parade-card">
+            <div>
+              <div class="parade-card__emoji">🎈</div>
+              <div class="parade-card__caption">Miss San Pedro &amp; local business floats lead the Sept 21 grand parade</div>
+            </div>
+          </div>
+          <div class="parade-card">
+            <div>
+              <div class="parade-card__emoji">🎆</div>
+              <div class="parade-card__caption">Midnight flag-raising &amp; fireworks over Louis Sylvestre Arena on Sept 20</div>
+            </div>
+          </div>
+          <div class="parade-card">
+            <div>
+              <div class="parade-card__emoji">🥁</div>
+              <div class="parade-card__caption">The Sept 9 Fire Engine Parade kicks off the September street parties</div>
+            </div>
+          </div>
+          <div class="parade-card">
+            <div>
+              <div class="parade-card__emoji">🎨</div>
+              <div class="parade-card__caption">J’ouvert at 4 AM — paint, powder and soca before the sun comes up</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="indep-tip">
+          <div class="indep-tip__icon">🚛</div>
+          <div class="indep-tip__text">
+            <h3>Book Your Cart Before Independence Weekend</h3>
+            <p>Carts book out fast the week of Sept 19–21 — locals and visitors alike want one for the parade. Deck yours in red, white and blue and join the Sept 21 procession, or use it to hop between the flag-raising, jouvert and Boca del Rio afterparty. <a href="book.html" style="color:#CE1126;font-weight:700;">Reserve your cart</a> before September fills up.</p>
+          </div>
+        </div>
+
+      </section>
 
       <!-- ===== LOBSTER FEST SECTION ===== -->
       <section id="lobster-fest" aria-labelledby="lobster-title">
