@@ -1503,3 +1503,70 @@
   border-radius: var(--radius-2xl);
   overflow: hidden;
 }
+
+/* ===== Rental Rates (booking pages) ===== */
+.rates-section { padding-bottom: 0; }
+.rates-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.rates-card__head {
+  background: #0F3B47;
+  color: #FFFFFF;
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+}
+.rates-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: #E8B654;
+  margin: 0 0 var(--space-2);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.rates-card__sub { color: #FFFFFF; font-size: var(--text-sm); font-weight: 600; margin: 0 auto var(--space-4); max-width: none; }
+.rates-card__seasons {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2) var(--space-6);
+  margin: 0 auto; max-width: none; font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #D0EDEF;
+}
+.rates-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.rates-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: var(--text-sm); }
+.rates-table th, .rates-table td { padding: var(--space-3) var(--space-4); text-align: center; white-space: nowrap; }
+.rates-table thead tr:first-child th { background: #13808B; color: #FFFFFF; font-weight: 700; font-size: var(--text-base); text-transform: uppercase; letter-spacing: 0.03em; }
+.rates-table thead .rates-table__corner { background: #13808B; font-size: var(--text-xs); text-align: left; vertical-align: middle; }
+.rates-table__sub th { background: #0F3B47; color: #FFFFFF; font-weight: 600; font-size: var(--text-xs); }
+.rates-table tbody th { text-align: left; font-weight: 700; color: var(--color-text); }
+.rates-table tbody td { font-weight: 700; color: var(--color-text); }
+.rates-table tbody tr:nth-child(odd) { background: var(--color-primary-subtle); }
+.rates-table .rates-table__group { border-left: 1px solid var(--color-border); }
+.rates-table thead .rates-table__group { border-left-color: rgba(255,255,255,0.35); }
+.rates-table thead .rates-table__corner, .rates-table tbody th { position: sticky; left: 0; z-index: 1; }
+.rates-table tbody th { background: var(--color-surface); }
+.rates-table tbody tr:nth-child(odd) th { background: var(--color-primary-subtle); }
+.rates-notes { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); padding: var(--space-6) var(--space-6) 0; }
+.rates-notes__title { font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-primary); margin: 0 0 var(--space-2); }
+.rates-notes p, .rates-notes__fuel p { font-size: var(--text-sm); color: var(--color-text); margin: 0 0 var(--space-1); max-width: none; }
+.rates-card__delivery { text-align: center; font-size: var(--text-sm); color: var(--color-text); margin: var(--space-5) auto 0; padding: 0 var(--space-6); max-width: none; }
+.rates-holiday {
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-1);
+  background: #E8B654; color: #1A1A18; border-radius: var(--radius-lg);
+  margin: var(--space-5) var(--space-6) 0; padding: var(--space-3) var(--space-4); text-align: center; font-size: var(--text-sm);
+}
+.rates-holiday strong { text-transform: uppercase; letter-spacing: 0.03em; }
+.rates-notes__fuel { padding: var(--space-5) var(--space-6) 0; }
+.rates-card__extended { text-align: center; font-weight: 700; color: var(--color-primary); font-size: var(--text-sm); margin: var(--space-5) auto 0; padding: 0 var(--space-6); max-width: none; }
+.rates-card__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); padding: var(--space-6); }
+@media (max-width: 640px) {
+  .rates-notes { grid-template-columns: 1fr; gap: var(--space-4); }
+  .rates-table { min-width: 0; font-size: 0.8125rem; }
+  .rates-table th, .rates-table td { padding: var(--space-2) 0.375rem; }
+  .rates-table tbody th, .rates-table__sub th, .rates-table thead .rates-table__corner { white-space: normal; }
+  .rates-table thead tr:first-child th { font-size: 0.875rem; }
+  .rates-table tbody th { padding-left: var(--space-3); }
+  .rates-card__actions .btn { width: 100%; justify-content: center; }
+}
