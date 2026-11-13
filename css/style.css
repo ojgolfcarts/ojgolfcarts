@@ -628,7 +628,7 @@
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-2xl);
-  padding: var(--space-7);
+  padding: var(--space-6);
   transition: transform var(--transition-interactive), box-shadow var(--transition-interactive);
 }
 .review-card:hover {
@@ -966,7 +966,7 @@
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-2xl);
-  padding: var(--space-7);
+  padding: var(--space-6);
 }
 .sidebar-card__title {
   font-family: var(--font-display);
@@ -1519,7 +1519,7 @@
 }
 
 /* ===== Rental Rates (booking pages) ===== */
-.rates-section { padding-bottom: 0; }
+.rates-section--after { padding-top: 0; }
 .rates-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
