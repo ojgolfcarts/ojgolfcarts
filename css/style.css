@@ -1584,3 +1584,20 @@
   .rates-table tbody th { padding-left: var(--space-3); }
   .rates-card__actions .btn { width: 100%; justify-content: center; }
 }
+
+/* ===== Header fit on small phones ===== */
+@media (max-width: 480px) {
+  .nav__inner { gap: var(--space-2); }
+  .nav__logo { min-width: 0; flex-shrink: 1; }
+  .nav__logo-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .nav__toggle-theme { display: none !important; }
+  .nav__actions { flex-shrink: 0; gap: var(--space-2); }
+  .nav__actions .btn--primary { display: inline-flex !important; padding: 0.5rem 0.875rem; font-size: 0.8125rem; min-height: 38px; white-space: nowrap; }
+}
+/* Holiday banner: keep heading tidy on phones */
+@media (max-width: 640px) {
+  .rates-holiday strong { font-size: 0.8125rem; letter-spacing: 0.01em; }
+}
+@media (max-width: 400px) {
+  .rates-holiday strong { font-size: 0.75rem; letter-spacing: 0; }
+}
